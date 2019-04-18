@@ -22,11 +22,11 @@ There are many alternatives to Click and you can have a look at them if
 you enjoy them better.  The obvious ones are ``optparse`` and ``argparse``
 from the standard library.
 
-Click is actually implemented as a wrapper around a mild fork of
-``optparse`` and does not implement any parsing itself.  The reason it's
-not based on ``argparse`` is that ``argparse`` does not allow proper
-nesting of commands by design and has some deficiencies when it comes to
-POSIX compliant argument handling.
+Click actually implements its own parsing of arguments and does not use
+``optparse`` or ``argparse`` following the ``optparse`` parsing behavior.
+The reason it's not based on ``argparse`` is that ``argparse`` does not
+allow proper nesting of commands by design and has some deficiencies when
+it comes to POSIX compliant argument handling.
 
 Click is designed to be fun to work with and at the same time not stand in
 your way.  It's not overly flexible either.  Currently, for instance, it
@@ -101,7 +101,7 @@ following:
 -   Click has a strong understanding of what types are and can give the user
     consistent error messages if something goes wrong.  A subcommand
     written by a different developer will not suddenly die with a
-    different error messsage because it's manually handled.
+    different error message because it's manually handled.
 -   Click has enough meta information available for its whole program
     that it can evolve over time to improve the user experience without
     forcing developers to adjust their programs.  For instance, if Click

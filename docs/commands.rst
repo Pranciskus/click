@@ -87,6 +87,10 @@ script like this:
     @click.option('--debug/--no-debug', default=False)
     @click.pass_context
     def cli(ctx, debug):
+        # ensure that ctx.obj exists and is a dict (in case `cli()` is called
+        # by means other than the `if` block below
+        ctx.ensure_object(dict)
+
         ctx.obj['DEBUG'] = debug
 
     @cli.command()
@@ -283,7 +287,7 @@ Multi Command Chaining
 Sometimes it is useful to be allowed to invoke more than one subcommand in
 one go.  For instance if you have installed a setuptools package before
 you might be familiar with the ``setup.py sdist bdist_wheel upload``
-command chain which invokes ``dist`` before ``bdist_wheel`` before
+command chain which invokes ``sdist`` before ``bdist_wheel`` before
 ``upload``.  Starting with Click 3.0 this is very simple to implement.
 All you have to do is to pass ``chain=True`` to your multicommand:
 

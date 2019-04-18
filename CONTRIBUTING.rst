@@ -7,11 +7,13 @@ Thanks for considering contributing to Click.
 Support questions
 =================
 
-Please, don't use the issue tracker for this. Check whether the `Pocoo IRC
-channel <http://www.pocoo.org/irc/>`_ can help with your issue. If your problem
+Please, don't use the issue tracker for this. Check whether the
+``#pocoo`` IRC channel on Freenode can help with your issue. If your problem
 is not strictly Click-specific, ``#python`` on Freenode is generally more
-active.  `StackOverflow <https://stackoverflow.com/>`_ is also worth
-considering.
+active.  Also try searching or asking on `Stack Overflow`_ with the
+``python-click`` tag. 
+
+.. _Stack Overflow: https://stackoverflow.com/questions/tagged/python-click?sort=votes
 
 Reporting issues
 ================
@@ -33,9 +35,9 @@ Submitting patches
   may ignore the line-length-limit if following it would make the code uglier.
 
 - For features: Consider whether your feature would be a better fit for an
-  `external package <http://click.pocoo.org/contrib/>`_
+  `external package <https://click.palletsprojects.com/en/7.x/contrib/>`_
 
-- For bugfixes: Submit against the latest maintenance branch instead of master!
+- For docs and bug fixes: Submit against the latest maintenance branch instead of master!
 
 Running the testsuite
 ---------------------
